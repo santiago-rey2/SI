@@ -2,7 +2,6 @@ package es.udc.sistemasinteligentes.practica;
 
 import es.udc.sistemasinteligentes.EstrategiaBusqueda;
 import es.udc.sistemasinteligentes.ProblemaBusqueda;
-import es.udc.sistemasinteligentes.ejemplo.Estrategia4;
 import es.udc.sistemasinteligentes.ejemplo.ProblemaAspiradora;
 
 public class Main {
