@@ -4,7 +4,7 @@ import es.udc.sistemasinteligentes.EstrategiaBusqueda;
 import es.udc.sistemasinteligentes.ProblemaBusqueda;
 import es.udc.sistemasinteligentes.ejemplo.ProblemaAspiradora;
 
-public class Main {
+public class MainEj1 {
 
     public static void main(String[] args) throws Exception {
         ProblemaAspiradora.EstadoAspiradora estadoInicial = new ProblemaAspiradora.EstadoAspiradora(ProblemaAspiradora.EstadoAspiradora.PosicionRobot.IZQ,
