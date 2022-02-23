@@ -8,5 +8,7 @@ public interface EstrategiaBusqueda {
      * @param p Problema a solucionar
      * @return Estado meta obtenido
      */
+    //Para que se pueda retornar una lista de nodos simplemente cambiamos la implementacion de Estado a
+    //Lista de nodos, obligandonos ya a devolver la lista de nodos
     public abstract ArrayList<Nodo> soluciona(ProblemaBusqueda p) throws Exception;
 }
