@@ -5,9 +5,9 @@ package es.udc.sistemasinteligentes;
  * del problema correctamente
  * */
 public class Nodo {
-    private Estado state;
-    private Accion action;
-    private Nodo father;
+    private final Estado state;
+    private final Accion action;
+    private final Nodo father;
 
     /** Constructor de Nodo  es necesario pasarle un Estado una accion y un padre a cada nodo
      * el primer nodo de cada resolución llevará siempre los parametros ac y fha a null ya que

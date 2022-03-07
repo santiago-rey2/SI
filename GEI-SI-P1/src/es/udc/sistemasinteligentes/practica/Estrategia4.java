@@ -15,8 +15,7 @@ public class Estrategia4 implements EstrategiaBusqueda {
         Nodo nodoactual = new Nodo(p.getEstadoInicial(),null,null);
         nodos.add(nodoactual);
 
-        int i = 1;
-
+        //int i = 1;
         //System.out.println((i++) + " - Empezando búsqueda en " + nodoactual.getEs());
 
         while (!p.esMeta(nodoactual.getEs())){

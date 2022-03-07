@@ -19,7 +19,7 @@ public class MainEj1 {
             System.out.println(n);
         }
         System.out.println("\nSolucion Aplicando BusquedaGrafo: \n");
-        EstrategiaBusqueda buscador2 = new Estrategia4();
+        EstrategiaBusqueda buscador2 = new EstrategiaBusquedaGrafo();
         solucion = buscador2.soluciona(aspiradora);
         for (Nodo n: solucion) {
             System.out.println(n);
