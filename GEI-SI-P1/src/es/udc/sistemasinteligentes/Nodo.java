@@ -5,42 +5,42 @@ package es.udc.sistemasinteligentes;
  * del problema correctamente
  * */
 public class Nodo {
-    private Estado es;
-    private Accion ac;
-    private Nodo fha;
+    private Estado state;
+    private Accion action;
+    private Nodo father;
 
     /** Constructor de Nodo  es necesario pasarle un Estado una accion y un padre a cada nodo
      * el primer nodo de cada resolución llevará siempre los parametros ac y fha a null ya que
      * al ser el primero no tendrá ni padre ni acciones definidas que lo lleven a el.
      * */
-    public Nodo(Estado es, Accion ac, Nodo fha) {
-        this.es = es;
-        this.ac = ac;
-        this.fha = fha;
+    public Nodo(Estado state, Accion action, Nodo father) {
+        this.state = state;
+        this.action = action;
+        this.father = father;
     }
 
     /**
      * Método de acceso a al estado almacenado en el nodo devuelve un elemento tipo Estado
      * */
     public Estado getEs() {
-        return es;
+        return state;
     }
     /**
      * Método de acceso a la acción almacenado en el nodo devuelve un elemento tipo Accion
      * */
     public Accion getAc() {
-        return ac;
+        return action;
     }
     /**
      * Método de acceso al padre del  nodo devuelve un elemento tipo Nodo
      * */
     public Nodo getFha() {
-        return fha;
+        return father;
     }
 
     @Override
     public int hashCode() {
-            return es.hashCode() ;
+            return state.hashCode() ;
     }
 
     @Override
@@ -52,10 +52,10 @@ public class Nodo {
 
     @Override
     public String toString() {
-        if(ac == null && fha == null){
-            return "Nodo {" + "es=" + es.toString() + ", ac= Ninguno"  + ", fha = Ninguno }'";
+        if(action == null && father == null){
+            return "Nodo {" + "es=" + state.toString() + ", ac= Ninguno"  + ", fha = Ninguno }'";
         }else{
-            return "Nodo {" + "es=" + es.toString() + ", ac=" + ac.toString() + ", fha=" + hashCode() +'}';
+            return "Nodo {" + "es=" + state.toString() + ", ac=" + action.toString() + ", fha=" + father.getEs() +'}';
         }
     }
 }

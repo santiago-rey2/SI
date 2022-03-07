@@ -10,5 +10,5 @@ public interface EstrategiaBusqueda {
      */
     //Para que se pueda retornar una lista de nodos simplemente cambiamos la implementacion de Estado a
     //Lista de nodos, obligandonos ya a devolver la lista de nodos
-    public abstract ArrayList<Nodo> soluciona(ProblemaBusqueda p) throws Exception;
+    public abstract Nodo[] soluciona(ProblemaBusqueda p) throws Exception;
 }
