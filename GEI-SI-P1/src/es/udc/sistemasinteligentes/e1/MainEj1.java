@@ -1,4 +1,4 @@
-package es.udc.sistemasinteligentes.practica;
+package es.udc.sistemasinteligentes.e1;
 
 import es.udc.sistemasinteligentes.EstrategiaBusqueda;
 import es.udc.sistemasinteligentes.Nodo;
