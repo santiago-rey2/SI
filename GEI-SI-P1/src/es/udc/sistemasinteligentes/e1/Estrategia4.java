@@ -15,30 +15,30 @@ public class Estrategia4 implements EstrategiaBusqueda {
         Nodo nodoactual = new Nodo(p.getEstadoInicial(),null,null);
         nodos.add(nodoactual);
 
-        //int i = 1;
-        //System.out.println((i++) + " - Empezando búsqueda en " + nodoactual.getEs());
+        int i = 1;
+        System.out.println((i++) + " - Empezando búsqueda en " + nodoactual.getEs());
 
         while (!p.esMeta(nodoactual.getEs())){
-            //System.out.println((i++) + " - " + nodoactual.getEs() + " no es meta");
+            System.out.println((i++) + " - " + nodoactual.getEs() + " no es meta");
             Accion[] accionesDisponibles = p.acciones(nodoactual.getEs());
             boolean modificado = false;
             for (Accion acc: accionesDisponibles) {
                 Nodo nsc =  new Nodo( p.result(nodoactual.getEs(), acc),acc,nodoactual);
-                //System.out.println((i++) + " - RESULT( " + nodoactual.getEs() + ","+ acc + " )=" + nsc.getEs());
+                System.out.println((i++) + " - RESULT( " + nodoactual.getEs() + ","+ acc + " )=" + nsc.getEs());
                 if (!nodos.contains(nsc)) {
                     nodoactual = nsc;
-                    //System.out.println((i++) + " - " + nsc.getEs() + " NO explorado");
+                    System.out.println((i++) + " - " + nsc.getEs() + " NO explorado");
                     nodos.add(nodoactual);
                     modificado = true;
-                    //System.out.println((i++) + " - Estado actual cambiado a " + nodoactual.getEs());
+                    System.out.println((i++) + " - Estado actual cambiado a " + nodoactual.getEs());
                     break;
                 }
-                //else
-                //  System.out.println((i++) + " - " + nsc.getEs() + " ya explorado");
+                else
+                  System.out.println((i++) + " - " + nsc.getEs() + " ya explorado");
             }
             if (!modificado) throw new Exception("No se ha podido encontrar una solución");
         }
-        //System.out.println((i++) + " - FIN - " + nodoactual.getEs());
+        System.out.println((i++) + " - FIN - " + nodoactual.getEs());
         return  reconstruye_sol(nodoactual).toArray(new Nodo[0]);
     }
 

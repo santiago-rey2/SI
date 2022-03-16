@@ -36,7 +36,7 @@ public class EstrategiaBusquedaGrafo implements  EstrategiaBusqueda {
         return  solucion;
     }
 
-    private ArrayList<Nodo> sucesores(Nodo n, ProblemaBusqueda p){
+    private ArrayList<Nodo> sucesores(Nodo n, ProblemaBusqueda p) throws Exception {
         ArrayList<Nodo> sucesores = new ArrayList<>();
         Accion[] acciones = p.acciones(n.getEs());
         for(Accion acc: acciones){

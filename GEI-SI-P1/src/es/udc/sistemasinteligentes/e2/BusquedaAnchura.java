@@ -5,27 +5,24 @@ import es.udc.sistemasinteligentes.EstrategiaBusqueda;
 import es.udc.sistemasinteligentes.Nodo;
 import es.udc.sistemasinteligentes.ProblemaBusqueda;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
-public class BusquedaGrafoProfundidad implements EstrategiaBusqueda {
+public class BusquedaAnchura implements EstrategiaBusqueda {
 
     @Override
     public Nodo[] soluciona(ProblemaBusqueda p) throws Exception {
         ArrayList<Nodo> explorados = new ArrayList<>();
         ArrayList<Nodo> sucesores;
-        Stack<Nodo> frontera = new Stack<>();
+        Queue<Nodo> frontera = new LinkedList<>();
         Nodo nodoactual = new Nodo(p.getEstadoInicial(),null,null);
         frontera.add(nodoactual);
         int i = 0;
         while(!p.esMeta(nodoactual.getEs())){
 
-            // System.out.println((i++) + " - Nodo Actual :  " + nodoactual);
+           // System.out.println((i++) + " - Nodo Actual :  " + nodoactual);
             if(frontera.isEmpty()) throw new Exception("Lista de Frontera Vacía");
-            // System.out.println((i++)+"Frontera " + frontera);
-            nodoactual = frontera.pop();
+           // System.out.println((i++)+"Frontera " + frontera);
+            nodoactual = frontera.poll();
             explorados.add(nodoactual);
             sucesores = sucesores(nodoactual,p);
             //System.out.println("Sucesores : " + sucesores);
