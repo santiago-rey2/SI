@@ -1,6 +1,6 @@
-package es.udc.sistemasinteligentes.g21_8.ejemplo;
+package es.udc.sistemasinteligentes.g2_18.ejemplo;
 
-import es.udc.sistemasinteligentes.g21_8.*;
+import es.udc.sistemasinteligentes.g2_18.*;
 
 import java.util.ArrayList;
 

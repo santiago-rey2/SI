@@ -1,8 +1,8 @@
-package es.udc.sistemasinteligentes.g21_8.e2;
+package es.udc.sistemasinteligentes.g2_18.e2;
 
-import es.udc.sistemasinteligentes.g21_8.EstrategiaBusqueda;
-import es.udc.sistemasinteligentes.g21_8.Nodo;
-import es.udc.sistemasinteligentes.g21_8.ProblemaBusqueda;
+import es.udc.sistemasinteligentes.g2_18.EstrategiaBusqueda;
+import es.udc.sistemasinteligentes.g2_18.Nodo;
+import es.udc.sistemasinteligentes.g2_18.ProblemaBusqueda;
 
 public class MainEj2a {
     public static void main(String[] args) throws Exception {
@@ -36,7 +36,7 @@ public class MainEj2a {
         }
 
 
-        EstadoMagico estadoInicial2  = new EstadoMagico(matriz3);
+        EstadoMagico estadoInicial2  = new EstadoMagico(matriz2);
         ProblemaBusqueda cuadrado2 = new ProblemaCuadradoMagico(estadoInicial2);
 //        System.out.println("\nSolucion cuadrado 2 Aplicando BusquedaAnchura: \n");
 //        buscador = new BusquedaAnchura();

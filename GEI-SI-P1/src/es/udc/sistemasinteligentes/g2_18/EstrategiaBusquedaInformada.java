@@ -1,4 +1,4 @@
-package es.udc.sistemasinteligentes.g21_8;
+package es.udc.sistemasinteligentes.g2_18;
 
 public interface EstrategiaBusquedaInformada {
     /**
@@ -7,5 +7,5 @@ public interface EstrategiaBusquedaInformada {
      * @param h Heurística que asigna a un estado un valor de utilidad
      * @return Estado meta obtenido
      */
-    public abstract Estado soluciona(ProblemaBusqueda p, Heuristica h) throws Exception;
+    public abstract Nodo[] soluciona(ProblemaBusqueda p, Heuristica h) throws Exception;
 }

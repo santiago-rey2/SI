@@ -1,9 +1,9 @@
-package es.udc.sistemasinteligentes.g21_8.e1;
+package es.udc.sistemasinteligentes.g2_18.e1;
 
-import es.udc.sistemasinteligentes.g21_8.Accion;
-import es.udc.sistemasinteligentes.g21_8.EstrategiaBusqueda;
-import es.udc.sistemasinteligentes.g21_8.Nodo;
-import es.udc.sistemasinteligentes.g21_8.ProblemaBusqueda;
+import es.udc.sistemasinteligentes.g2_18.Accion;
+import es.udc.sistemasinteligentes.g2_18.EstrategiaBusqueda;
+import es.udc.sistemasinteligentes.g2_18.Nodo;
+import es.udc.sistemasinteligentes.g2_18.ProblemaBusqueda;
 
 import java.util.ArrayList;
 
@@ -16,7 +16,7 @@ public class Estrategia4 implements EstrategiaBusqueda {
     @Override
     public Nodo[] soluciona(ProblemaBusqueda p) throws Exception{
         ArrayList<Nodo> nodos = new ArrayList<>();
-        Nodo nodoactual = new Nodo(p.getEstadoInicial(),null,null);
+        Nodo nodoactual = new Nodo(p.getEstadoInicial(),null,null,0,0);
         nodos.add(nodoactual);
 
         int i = 1;
@@ -27,7 +27,7 @@ public class Estrategia4 implements EstrategiaBusqueda {
             Accion[] accionesDisponibles = p.acciones(nodoactual.getEs());
             boolean modificado = false;
             for (Accion acc: accionesDisponibles) {
-                Nodo nsc =  new Nodo( p.result(nodoactual.getEs(), acc),acc,nodoactual);
+                Nodo nsc =  new Nodo( p.result(nodoactual.getEs(), acc),acc,nodoactual,0,0);
                 System.out.println((i++) + " - RESULT( " + nodoactual.getEs() + ","+ acc + " )=" + nsc.getEs());
                 if (!nodos.contains(nsc)) {
                     nodoactual = nsc;

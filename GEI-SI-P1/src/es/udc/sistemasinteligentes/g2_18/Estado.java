@@ -1,4 +1,4 @@
-package es.udc.sistemasinteligentes.g21_8;
+package es.udc.sistemasinteligentes.g2_18;
 
 public abstract class Estado {
     /* El estado deberá sobreescribir estos métodos para mostrarse correctamente y permitir comparaciones. */

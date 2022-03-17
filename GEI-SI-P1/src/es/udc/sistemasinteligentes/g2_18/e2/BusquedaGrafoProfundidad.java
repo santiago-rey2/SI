@@ -1,9 +1,9 @@
-package es.udc.sistemasinteligentes.g21_8.e2;
+package es.udc.sistemasinteligentes.g2_18.e2;
 
-import es.udc.sistemasinteligentes.g21_8.Accion;
-import es.udc.sistemasinteligentes.g21_8.EstrategiaBusqueda;
-import es.udc.sistemasinteligentes.g21_8.Nodo;
-import es.udc.sistemasinteligentes.g21_8.ProblemaBusqueda;
+import es.udc.sistemasinteligentes.g2_18.Accion;
+import es.udc.sistemasinteligentes.g2_18.EstrategiaBusqueda;
+import es.udc.sistemasinteligentes.g2_18.Nodo;
+import es.udc.sistemasinteligentes.g2_18.ProblemaBusqueda;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -20,7 +20,7 @@ public class BusquedaGrafoProfundidad implements EstrategiaBusqueda {
         ArrayList<Nodo> explorados = new ArrayList<>();
         ArrayList<Nodo> sucesores;
         Stack<Nodo> frontera = new Stack<>();
-        Nodo nodoactual = new Nodo(p.getEstadoInicial(),null,null);
+        Nodo nodoactual = new Nodo(p.getEstadoInicial(),null,null,0,0);
         frontera.add(nodoactual);
         int i = 0;
         while(!p.esMeta(nodoactual.getEs())){
@@ -52,7 +52,7 @@ public class BusquedaGrafoProfundidad implements EstrategiaBusqueda {
         ArrayList<Nodo> sucesores = new ArrayList<>();
         Accion[] acciones = p.acciones(n.getEs());
         for(Accion acc: acciones){
-            Nodo nuevo = new Nodo(p.result(n.getEs(),acc),acc,n);
+            Nodo nuevo = new Nodo(p.result(n.getEs(),acc),acc,n,0,0);
             nodoscreados++;
             sucesores.add(nuevo);
         }

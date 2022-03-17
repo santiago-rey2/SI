@@ -1,7 +1,7 @@
-package es.udc.sistemasinteligentes.g21_8.ejemplo;
+package es.udc.sistemasinteligentes.g2_18.ejemplo;
 
-import es.udc.sistemasinteligentes.g21_8.EstrategiaBusqueda;
-import es.udc.sistemasinteligentes.g21_8.ProblemaBusqueda;
+import es.udc.sistemasinteligentes.g2_18.EstrategiaBusqueda;
+import es.udc.sistemasinteligentes.g2_18.ProblemaBusqueda;
 
 public class Main {
 

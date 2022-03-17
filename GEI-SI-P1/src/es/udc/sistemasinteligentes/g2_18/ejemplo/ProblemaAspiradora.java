@@ -1,8 +1,8 @@
-package es.udc.sistemasinteligentes.g21_8.e1;
+package es.udc.sistemasinteligentes.g2_18.ejemplo;
 
-import es.udc.sistemasinteligentes.g21_8.Accion;
-import es.udc.sistemasinteligentes.g21_8.Estado;
-import es.udc.sistemasinteligentes.g21_8.ProblemaBusqueda;
+import es.udc.sistemasinteligentes.g2_18.Accion;
+import es.udc.sistemasinteligentes.g2_18.Estado;
+import es.udc.sistemasinteligentes.g2_18.ProblemaBusqueda;
 
 public class ProblemaAspiradora extends ProblemaBusqueda {
     public static class EstadoAspiradora extends Estado {
@@ -66,22 +66,22 @@ public class ProblemaAspiradora extends ProblemaBusqueda {
             EstadoAspiradora.PosicionRobot nuevaPosicionRobot=esAs.posicionRobot;
             EstadoAspiradora.PosicionBasura nuevaPosicionBasura=esAs.posicionBasura;
 
-            if (tipo== Tipo.IZQ)
+            if (tipo==Tipo.IZQ)
                 nuevaPosicionRobot = EstadoAspiradora.PosicionRobot.IZQ;
-            else if (tipo== Tipo.DER)
+            else if (tipo==Tipo.DER)
                 nuevaPosicionRobot = EstadoAspiradora.PosicionRobot.DER;
-            else if (tipo== Tipo.ASP) {
-                if (esAs.posicionRobot== EstadoAspiradora.PosicionRobot.IZQ) { //Aspiramos izquierda
-                    if ((esAs.posicionBasura== EstadoAspiradora.PosicionBasura.DER) ||
-                            (esAs.posicionBasura== EstadoAspiradora.PosicionBasura.AMBAS)) {
+            else if (tipo==Tipo.ASP) {
+                if (esAs.posicionRobot==EstadoAspiradora.PosicionRobot.IZQ) { //Aspiramos izquierda
+                    if ((esAs.posicionBasura==EstadoAspiradora.PosicionBasura.DER) ||
+                            (esAs.posicionBasura==EstadoAspiradora.PosicionBasura.AMBAS)) {
                         nuevaPosicionBasura = EstadoAspiradora.PosicionBasura.DER;
                     }
                     else
                         nuevaPosicionBasura = EstadoAspiradora.PosicionBasura.NINGUNA;
                 }
                 else{ //Aspiramos derecha
-                    if ((esAs.posicionBasura== EstadoAspiradora.PosicionBasura.IZQ) ||
-                            (esAs.posicionBasura== EstadoAspiradora.PosicionBasura.AMBAS)) {
+                    if ((esAs.posicionBasura==EstadoAspiradora.PosicionBasura.IZQ) ||
+                            (esAs.posicionBasura==EstadoAspiradora.PosicionBasura.AMBAS)) {
                         nuevaPosicionBasura = EstadoAspiradora.PosicionBasura.IZQ;
                     }
                     else

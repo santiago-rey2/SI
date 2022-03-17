@@ -1,7 +1,7 @@
-package es.udc.sistemasinteligentes.g21_8.e2;
+package es.udc.sistemasinteligentes.g2_18.e2;
 
-import es.udc.sistemasinteligentes.g21_8.Accion;
-import es.udc.sistemasinteligentes.g21_8.Estado;
+import es.udc.sistemasinteligentes.g2_18.Accion;
+import es.udc.sistemasinteligentes.g2_18.Estado;
 
 public class AccionesMagicas extends Accion {
 

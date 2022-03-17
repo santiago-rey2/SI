@@ -1,6 +1,6 @@
-package es.udc.sistemasinteligentes.g21_8.e2;
+package es.udc.sistemasinteligentes.g2_18.e2;
 
-import es.udc.sistemasinteligentes.g21_8.Estado;
+import es.udc.sistemasinteligentes.g2_18.Estado;
 
 public class EstadoMagico extends Estado {
 
@@ -29,6 +29,7 @@ public class EstadoMagico extends Estado {
         }
         return  true;
     }
+    // Devuelve una copia de la matriz interna del estado
     private int[][] cloneMatrix(int[][] matrix, int tam ){
         int [][] aux  = new int[tam][tam];
          for (int i = 0; i < tam ; i++) {
@@ -84,6 +85,10 @@ public class EstadoMagico extends Estado {
                 j++;
             }
         return suma;
+    }
+    // Devuelve la matriz interna del estado
+    public int[][] getMAtrix(){
+        return matriz;
     }
 
     @Override
