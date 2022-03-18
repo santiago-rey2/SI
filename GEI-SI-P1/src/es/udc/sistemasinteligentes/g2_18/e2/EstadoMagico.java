@@ -19,7 +19,7 @@ public class EstadoMagico extends Estado {
     public int getTamMatriz() {
         return tamMatriz;
     }
-    // Comprueba que una sea aplicable (No se admiten repetidos en la matriz)
+    // Comprueba que una accion sea aplicable (No se admiten repetidos en la matriz)
     public boolean chechEquals(int accion){
         for (int i = 0; i < tamMatriz; i++) {
             for (int j = 0; j < tamMatriz; j++) {

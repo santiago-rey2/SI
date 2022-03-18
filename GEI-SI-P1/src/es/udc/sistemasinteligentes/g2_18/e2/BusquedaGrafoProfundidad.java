@@ -10,6 +10,12 @@ import java.util.Stack;
 
 public class BusquedaGrafoProfundidad implements EstrategiaBusqueda {
 
+    /*
+     Implementación con el mismo funcionamiento que busquedaAnchura
+     la unica diferencia entre las dos clases es que en anchura implementamos un cola
+     para la frontera y en esta implementamos un stack cambiando la forma de recorrer
+     el arbol de soluciones
+     */
     private int nodoscreados;
     private int nodosexplorados;
 
@@ -22,7 +28,6 @@ public class BusquedaGrafoProfundidad implements EstrategiaBusqueda {
         Stack<Nodo> frontera = new Stack<>();
         Nodo nodoactual = new Nodo(p.getEstadoInicial(),null,null,0,0);
         frontera.add(nodoactual);
-        int i = 0;
         while(!p.esMeta(nodoactual.getEs())){
 
             if(frontera.isEmpty()) throw new Exception("Lista de Frontera Vacía");

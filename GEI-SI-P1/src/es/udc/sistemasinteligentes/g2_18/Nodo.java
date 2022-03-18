@@ -1,8 +1,9 @@
 package es.udc.sistemasinteligentes.g2_18;
 
-/** La clase nodo seran los nodos utilizados en nuestro ejercicio
- * para almacenar la información necesaria para poder reconstruir la solucionç
- * del problema correctamente
+/** Clase Base apliacada donde no solo guardamos cada estado
+ * sino que almacenamos mas informacion necesaria como la accion que se realizo para obtener el estado
+ * el padre del nodo que nos permite reconstuir la solucion facilmente y los parametros coste y funcion de coste
+ * necesarios para las busquedas informadas
  * */
 public class Nodo {
     private Estado estado;
@@ -41,19 +42,28 @@ public class Nodo {
     public Nodo getFha() {
         return father;
     }
-
+    /**
+    * Método de acceso al coste almacenado en el nodo devuelve un elemento tipo float
+     * */
     public float getCoste() {
         return coste;
     }
-
+    /**
+     * Método de acceso a la funcion de coste del nodo devuelve un elemento de tipo float
+    * */
     public float getF() {
         return f;
     }
-
+    /**
+     * Setter para porder modificar el coste de un nodo ya que este sew calcula dynamicamente mientras se
+     * ejecuta el problema
+     * */
     public void setCoste(float coste){
         this.coste = coste;
     }
-
+    /**
+     * Setter para poder modificar el valor de la funcion de coste del nodo ya que esta se calculara de forma
+     * dinamica en la ejecucion del problema*/
     public void setFunction(float funcion){
         this.f = funcion;
     }

@@ -9,9 +9,12 @@ import java.util.*;
 
 public class BusquedaAnchura implements EstrategiaBusqueda {
 
-    private int nodoscreados;
-    private int nodosexplorados;
+    private int nodoscreados; // Variable para alamacenar el número de nodos creados por el problema
+    private int nodosexplorados; // Variable para  almacenar el número de nodos explorados por el problema
 
+    /*
+    * Esta implementación es exactamente igual a la implementación EstrategiaBusquedaGrafo del ejercicio 1
+    */
     @Override
     public Nodo[] soluciona(ProblemaBusqueda p) throws Exception {
         nodoscreados = 0;
@@ -22,7 +25,6 @@ public class BusquedaAnchura implements EstrategiaBusqueda {
         Nodo nodoactual = new Nodo(p.getEstadoInicial(),null,null,0,0);
         frontera.add(nodoactual);
         nodoscreados++;
-        int i = 0;
         while(!p.esMeta(nodoactual.getEs())){
             if(frontera.isEmpty()) throw new Exception("Lista de Frontera Vacía");
             nodoactual = frontera.poll();
